@@ -40,10 +40,14 @@ jobs:
        run: |
          #echo values
          ls -l jfrog.sarif
-     - name: Upload SARIF file for GitHub Advanced Security Dashboard
-        uses: github/codeql-action/upload-sarif@v2
-        with:
+     - name: Upload SARIF file
+       uses: github/codeql-action/upload-sarif@v3
+       with:
+          # Path to SARIF file relative to the root of the repository
           sarif_file: jfrog.sarif
+          # Optional category for the results
+          # Used to differentiate multiple results for one commit
+          category: jfrog_asafc
      - name: echo
        run: |
          #echo values
