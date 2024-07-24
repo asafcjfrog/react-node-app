@@ -35,7 +35,15 @@ jobs:
           docker pull webgoat/webgoat
      - name: JFrog docker image scan 🐳🐸
        run: |
-          jf docker scan webgoat/webgoat
+          jf docker scan webgoat/webgoat --format=sarif > jfrog.sarif
+     - name: ls
+       run: |
+         #echo values
+         ls -l jfrog.sarif
+     - name: Upload SARIF file for GitHub Advanced Security Dashboard
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: jfrog.sarif
      - name: echo
        run: |
          #echo values
@@ -46,4 +54,3 @@ jobs:
          echo "DOCKER_JF_RT_REPO" ${{secrets.DOCKER_JF_RT_REPO}}
          echo "NPM_JF_RT_REPO" ${{secrets.NPM_JF_RT_REPO}}
          echo "Done!!!"
-          
