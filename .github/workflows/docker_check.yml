@@ -40,11 +40,17 @@ jobs:
        run: |
          #echo values
          ls -l jfrog.sarif
+     - name: Install jq
+       run: |
+         sudo apt-get update && sudo apt-get install -y jq
+     - name: Extract specific SARIF run
+       run: |
+         jq '{ $schema: ."$schema", version: .version, runs: [.runs[2]] }' jfrog.sarif > jfrog_single_run.sarif
      - name: Upload SARIF file
        uses: github/codeql-action/upload-sarif@v3
        with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: jfrog.sarif
+          sarif_file: jfrog_single_run.sarif
           # Optional category for the results
           # Used to differentiate multiple results for one commit
           category: jfrog_asafc
