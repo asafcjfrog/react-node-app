@@ -1,0 +1,49 @@
+name: 'docker_check'
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: 
+      - closed
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+ npm-build-and-publish:
+   runs-on: ubuntu-latest
+   env:
+     BUILD_NAME: 'docker_check'
+     JFROG_BUILD_STATUS: PASS
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v4
+     - name: JFrog CLI setup 🐸
+       uses: jfrog/setup-jfrog-cli@v4
+       env:
+        JF_URL: ${{ secrets.JF_URL }}
+        JF_PASSWORD: ${{ secrets.JF_PASSWORD }}
+        JF_USER: ${{secrets.JF_USER}}
+     - name: Health check JFrog Artifactory instance 🐸
+       run: |
+        jf --version
+        jf rt ping
+        jf config show
+     - name: Docker Download 🐳🐸
+       run: |
+          docker pull webgoat/webgoat
+     - name: JFrog docker image scan 🐳🐸
+       run: |
+          jf docker scan webgoat/webgoat
+     - name: echo
+       run: |
+         #echo values
+         echo "JF_URL" ${{ secrets.JF_URL }}
+         echo "JF_PASSWORD" ${{ secrets.JF_PASSWORD }}
+         echo "JF_USER" ${{secrets.JF_USER}}
+         echo "JF_ACCESS_TOKEN" ${{secrets.JF_ACCESS_TOKEN}}
+         echo "DOCKER_JF_RT_REPO" ${{secrets.DOCKER_JF_RT_REPO}}
+         echo "NPM_JF_RT_REPO" ${{secrets.NPM_JF_RT_REPO}}
+         echo "Done!!!"
+          
