@@ -1,20 +1,21 @@
-name: 'Upload SARIF Artifact'
+name: 'Upload SARIF to GHAS'
 on:
   workflow_dispatch:
     inputs:
-      sarif_file:
-        description: 'Path to SARIF file'
+      sarif_path:
+        description: 'Path to SARIF file in the repository'
         required: true
-        default: 'file.sarif'
+        default: 'path/to/your/sarif/file.sarif'
 
 jobs:
   upload-sarif:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Upload SARIF artifact
-        uses: actions/upload-artifact@v3
+
+      - name: Upload SARIF to GHAS
+        uses: github/codeql-action/upload-sarif@v3
         with:
-          name: sarif_artifact
-          path: ${{ github.event.inputs.sarif_file }}
+          sarif_file: ${{ github.event.inputs.sarif_path }}
+          category: jfrog_asafc
