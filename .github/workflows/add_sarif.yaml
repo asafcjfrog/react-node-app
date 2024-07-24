@@ -1,0 +1,20 @@
+name: 'Upload SARIF Artifact'
+on:
+  workflow_dispatch:
+    inputs:
+      sarif_file:
+        description: 'Path to SARIF file'
+        required: true
+        default: 'file.sarif'
+
+jobs:
+  upload-sarif:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Upload SARIF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sarif_artifact
+          path: ${{ github.event.inputs.sarif_file }}
