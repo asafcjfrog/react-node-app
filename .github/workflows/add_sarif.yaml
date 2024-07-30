@@ -1,5 +1,8 @@
 name: 'Upload SARIF to GHAS'
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       sarif_path:
@@ -17,5 +20,6 @@ jobs:
       - name: Upload SARIF to GHAS
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: ${{ github.event.inputs.sarif_path }}
+          #sarif_file: ${{ github.event.inputs.sarif_path }}
+          sarif_file: asafc_workaround_final.sarif
           category: jfrog_asafc
