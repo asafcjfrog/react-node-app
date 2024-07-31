@@ -51,7 +51,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "/react-node-app/.github/workflows/env_vars.yaml"
+                  "uri": "react-node-app/.github/workflows/env_vars.yaml"
                 },
                 "region": {
                   "startLine": 56,
