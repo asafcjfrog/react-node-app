@@ -54,9 +54,9 @@
                   "uri": "react-node-app/.github/workflows/env_vars.yaml"
                 },
                 "region": {
-                  "startLine": 56,
-                  "startColumn": 4,
-                  "endLine": 56,
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
                   "endColumn": 4,
                   "snippet": {
                     "text": "1snippet_evidence_tok************"
