@@ -51,7 +51,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///3/tmp/tmpsgcanxxs/unpacked/filesystem/blobs/sha256/bde451613ef3570e3b66c8cdbe1f880706134d7e02d8b528be5b9957466cc318/home/webgoat/webgoat.jar/BOOT-INF/classes/lessons/jwt/documentation/JWT_libraries.adoc"
+                  "uri": "file://asafcjfrog/react-node-app/.github/workflows/env_vars.yaml@refs/heads/main"
                 },
                 "region": {
                   "startLine": 56,
@@ -60,30 +60,6 @@
                   "endColumn": 4,
                   "snippet": {
                     "text": "1snippet_evidence_tok************"
-                  }
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "REQ.SECRET.GENERIC.TEXT",
-          "message": {
-            "text": "2results->message->text Hardcoded secrets were found"
-          },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "file:///5/tmp/tmpsgcanxxs/unpacked/filesystem/blobs/sha256/bde451613ef3570e3b66c8cdbe1f880706134d7e02d8b528be5b9957466cc318/home/webgoat/webgoat.jar/BOOT-INF/classes/lessons/jwt/documentation/JWT_libraries.adoc"
-                },
-                "region": {
-                  "startLine": 40,
-                  "startColumn": 40,
-                  "endLine": 40,
-                  "endColumn": 4,
-                  "snippet": {
-                    "text": "2snippet_evidence_tok************"
                   }
                 }
               }
