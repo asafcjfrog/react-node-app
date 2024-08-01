@@ -46,7 +46,7 @@
         {
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
-            "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found"
+            "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
 			"markdown": "message markdown [Secret found in Binary: <filename>] Hardcoded secrets were found"
           },
           "locations": [
