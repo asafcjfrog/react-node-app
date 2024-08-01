@@ -21,7 +21,7 @@
               },
               "helpUri": "https://helpUri.example.com/rules/EXAMPLE001",
               "help": {
-                "text": "help.text: This is an example help text for the rule."
+                "text": "help.text: This is an example help text for the rule.",
 				"markdown": "help.markdown: This is an example help text for the rule."
               }
             }
