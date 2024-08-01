@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-			"markdown": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| `src/main.js`  | Line 10       | Code snippet example  |",
+			"markdown": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| src/main.js  | Line 10       | Code snippet example  |",
           },
           "locations": [
             {
