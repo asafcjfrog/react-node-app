@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-			"markdown": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| `src/main.js`  | Line 10       | Code snippet example  |"
+			"markdown": "<details open><summary> 🔒 Security Status </summary><p></p><pre>Security Vulnerabilities: <b>510</b> (208 unique)<br>├── 2 Secrets 🟠 <span style=\"color:orange\">2 Medium</span><br>└── 508 SCA ❗️ <span style=\"color:red\">15 Critical</span> (1 Applicable, 14 Not Applicable)<br>            🔴 <span style=\"color:red\">32 High</span> (2 Applicable, 17 Not Applicable)<br>            🟠 <span style=\"color:orange\">70 Medium</span> (2 Not Applicable)<br>            🟡 <span style=\"color:yellow\">323 Low</span> (1 Applicable, 23 Not Applicable)<br>            ⚪️ <span style=\"color:white\">68 Unknown</span> (3 Applicable, 3 Not Applicable)</pre></details>"
           },
           "locations": [
             {
