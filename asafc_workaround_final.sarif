@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-			"markdown": "message markdown [Secret found in Binary: <filename>] Hardcoded secrets were found"
+			"markdown": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| `src/main.js`  | Line 10       | Code snippet example  |\n| `src/utils.js` | Line 42       | Evidence description  |\n| `src/app.js`   | Line 23       | Detailed explanation  |",
           },
           "locations": [
             {
@@ -70,7 +70,7 @@
           "partialFingerprints": {
             "primaryLocationLineHash": "abcdef1234567891"
           },
-          "text": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| `src/main.js`  | Line 10       | Code snippet example  |\n| `src/utils.js` | Line 42       | Evidence description  |\n| `src/app.js`   | Line 23       | Detailed explanation  |",
+          
         }
       ]
     }
