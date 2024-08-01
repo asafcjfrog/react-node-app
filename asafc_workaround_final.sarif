@@ -69,7 +69,7 @@
           ],
           "partialFingerprints": {
             "primaryLocationLineHash": "abcdef1234567891"
-          }
+          },
           "text": "| filepath       | Location      | evidence              |\n|----------------|---------------|-----------------------|\n| `src/main.js`  | Line 10       | Code snippet example  |\n| `src/utils.js` | Line 42       | Evidence description  |\n| `src/app.js`   | Line 23       | Detailed explanation  |",
         }
       ]
