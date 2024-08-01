@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-			"markdown": "Found Secrets in Binary docker scanning: COMMAND_PLACEHOLDER<br><br><table><thead><tr><th>Number</th><th>Filepath</th><th>Evidence</th></tr></thead><tbody><tr><td>1</td><td><code>src/main.js</code></td><td>API key detected</td></tr><tr><td>2</td><td><code>src/utils.js</code></td><td>Password in comment</td></tr><tr><td>3</td><td><code>src/app.js</code></td><td>Hardcoded secret</td></tr></tbody></table>"
+			"markdown": "<details open><summary> 🔒 Found Secrets in Binary docker scanning: COMMAND_PLACEHOLDER </summary><p></p> <pre>| Number | Filepath       | Evidence            |\\n|--------|----------------|----------------------|\\n| 1      | `src/main.js`  | API key detected     |\\n| 2      | `src/utils.js` | Password in comment  |\\n| 3      | `src/app.js`   | Hardcoded secret     |</pre></details>"
           },
           "locations": [
             {
