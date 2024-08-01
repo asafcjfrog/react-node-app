@@ -56,9 +56,9 @@
                   "uri": ".github/workflows/env_vars.yaml"
                 },
                 "region": {
-                  "startLine": 1,
+                  "startLine": 0,
                   "startColumn": 1,
-                  "endLine": 1,
+                  "endLine": 0,
                   "endColumn": 1,
                   "snippet": {
                     "text": "1snippet_evidence_tok************"
