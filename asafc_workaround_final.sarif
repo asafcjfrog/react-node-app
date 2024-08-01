@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-	    "markdown": "\n\n    🔒 Found Secrets in Binary docker scanning: COMMAND_PLACEHOLDER\n\n \n * Filepath: YYYY\n * Evidence: ZZZZ\n\n"
+	    "markdown": "\n\n    🔒 Found Secrets in Binary docker scanning: {COMMAND_PLACEHOLDER}, Github Actions Workflow {GITHUB_WORKFLOW} run {GITHUB_RUN_NUMBER}\n\n \n * Filepath: YYYY\n * Evidence: ZZZZ\n\n"
           },
           "locations": [
             {
