@@ -47,7 +47,7 @@
           "ruleId": "REQ.SECRET.GENERIC.TEXT",
           "message": {
             "text": "message text [Secret found in Binary: <filename>] Hardcoded secrets were found",
-			"markdown": "**Security Summary**\\n\\n| Status | Filepath       | Details              |\\n|--------|----------------|----------------------|\\n| ✅     | `src/main.js`  | No issues detected   |\\n| ❌     | `src/utils.js` | Vulnerability found  |"
+	    "markdown": "\n\n    🔒 Found Secrets in Binary docker scanning: COMMAND_PLACEHOLDER\n\n \n * Filepath: YYYY\n * Evidence: ZZZZ\n\n"
           },
           "locations": [
             {
